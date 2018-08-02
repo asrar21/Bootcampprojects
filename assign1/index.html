@@ -1,0 +1,18 @@
+<html>
+    <title>Fetch Data</title>
+    <button onclick="getdata()">click to get data</button>
+    <script>
+        function getdata(){
+            fetch('https://davidwalsh.name/some/url', {
+	method: 'get'
+}).then(function(response) {
+    console.log(response);
+	
+}).catch(function(err) {
+	// Error :(
+        console.log(err);
+});
+}
+    </script>
+<script src="index.js"></script>
+    </html>

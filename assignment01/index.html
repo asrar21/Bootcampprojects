@@ -1,0 +1,35 @@
+<html>
+    <title>Fetch Data</title>
+    <button onclick="hello()">click to get data</button>
+    <body>
+        <div id="container">
+   
+        </div>
+   
+   </body>
+    <script>
+        function hello(){
+            fetch("https://api.github.com/users/octocat/followers").then(function(response){
+                return response.json().then(function(data){
+                    document.write("<center><h1> GitHub USER DATA <h1/><center>");
+            
+for (i = 0; i < data.length; i++) {
+    var k=data[i];
+   
+    document.write("<p>Login is:"+k.login+"<p/><br/>");
+        document.write("<p>Url is:"+k.url+"<p/><br/>");
+ 
+   
+}
+
+                })
+            
+            }).catch(function(err){
+                console.log(err);
+            })
+        }
+    </script>
+<script src="index.js"></script>
+
+    </html>
+  

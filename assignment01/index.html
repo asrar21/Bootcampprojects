@@ -2,25 +2,42 @@
     <title>Fetch Data</title>
     <button onclick="hello()">click to get data</button>
     <body>
-        <div id="container">
+        <p id="container">
+           
    
-        </div>
+        </p>
    
    </body>
     <script>
         function hello(){
             fetch("https://api.github.com/users/octocat/followers").then(function(response){
                 return response.json().then(function(data){
-                    document.write("<center><h1> GitHub USER DATA <h1/><center>");
-            
+                    
+var tbody = document.getElementById('tbody');
+
+
+  
 for (i = 0; i < data.length; i++) {
-    var k=data[i];
+    
+    
+    var tr = "<tr>";
+
+
+tr += "<br/><br/>"
+
+tr += "<td> " + data[i].login + "</td>" + "<td> " + data[i].url + "</td></tr>";
+
+
+tbody.innerHTML += tr;
+
+
+ 
+}
    
-    document.write("<p>Login is:"+k.login+"<p/><br/>");
-        document.write("<p>Url is:"+k.url+"<p/><br/>");
+  
  
    
-}
+
 
                 })
             
@@ -29,6 +46,13 @@ for (i = 0; i < data.length; i++) {
             })
         }
     </script>
+    <body>
+        <h1>GitHUB User Followers</h1>
+            <table>
+                    <tbody id="tbody" style="background-color:lightgray; color:blue;"></tbody>
+                </table>
+       
+       </body>
 <script src="index.js"></script>
 
     </html>

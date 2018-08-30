@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+.mini{
+  background-color: #222;
+  text-align: center;
+  color:white;
+  float:center;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 100px;
+  padding: 5px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.Home-btn button{
+  margin-top: 20px;
+  padding: 8px 35px;
+  outline: none;
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-weight: 600;
+  background: rgb(147,206,222);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+  float:center;
+}
+.Home-btn button:hover{
+  background: #4DA7C1;
+  border: 1px solid #fff;
+  transition: 0.3s ease-in-out;
+}
+.right{
+  float:right;
+}
+/* .modal-content input{
+  width: 85%;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  font-family: sans-serif;
+  font-size: 14px;
+  padding: 12px 5px;
+  color: #fff;
+  outline: none;
+  letter-spacing: 1px;
+}
+.modal-content h3{
+  margin-top: 0 !important;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 22px
+} */
